@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+    --roxo-gamifica: #48208b;
+    --laranja-gamifica: #f06638;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.banner {
+    /*VH = Porcentagem da ALTURA da viewport (janela)  */
+    height: 100vh;
+
+    background-image: linear-gradient(90deg, rgb(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bgroom.png);
+    background-repeat: no-repeat;
+
+    background-position: 235% 40%;
+}
+
+.container-grid {
+    width: 80%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+header {
+    height: 165px;
+
+}
+
+header div.container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 290px;
+}
+
+.menu {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: white;
+    text-decoration: underline transparent;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    text-decoration-thickness: 2px;
+    transition: text-decoration 500ms ease;
+}
+
+.menu a:hover {
+    text-decoration-color: white;
+}
+
+.conteudo-banner {
+    height: calc(100vh - 280px);
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-banner p {
+    /* Altura deve ser 100vh - altura do header */
+    color: white;
+    font-family: 'Anta', sans-serif;
+    font-size: 32px;
+}
+
+#sobre {
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 100px 25%;
+
+    font-family: "Anta", sans-serif;
+    text-align: center;
+}
+
+#sobre h2{
+    font-size: 32px;
+}
+
+#cases{
+    text-align: center;
+
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+#cases h2 {
+    margin-bottom: 70px;
+    font-family: 'Montserrat';
+}
+
+.card {
+    height: 400px;
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--roxo-gamifica);
+    
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    
+    border-radius: 4px;
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    height: 55%;
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card p {
+    text-align: left;
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+
+    padding: 7%;
+
+    color: white;
+}
+
+.card button {
+    width: 90%;
+    height: 40px;
+
+    background-color: var(--laranja-gamifica);
+
+    border: none;
+    border-radius: 4px;
+
+    color: white;
+
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+.card button:hover {
+    background-color: #ad4929;
+}
+
+.container-cards {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
