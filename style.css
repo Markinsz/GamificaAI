@@ -179,3 +179,52 @@ header img {
     display: flex;
     justify-content: space-between;
 }
+
+#portfolio {
+    height: 250px;
+
+    margin-bottom: 120px;
+
+    background-image: url(img/Bonecos.png);
+    background-size: contain;
+
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+.filtro {
+    height: 100%;
+    width: 100%;
+
+    background-color: #48208bc2;
+
+    position: absolute;
+}
+
+#portfolio .container-grid {
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+#portfolio a {
+    width: fit-content;
+
+    font-family: "Anta";
+    font-size: 28px;
+         
+    color: white;
+
+    z-index: 1;
+
+    transition: transform 500ms;
+}
+
+#portfolio a:hover{
+    transform: scale(1.05);
+
+}
