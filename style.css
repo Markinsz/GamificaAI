@@ -18,6 +18,11 @@ html {
     scroll-behavior: smooth;
 }
 
+h2 {
+    font-family: 'Anta';
+    font-size: 28px;
+}
+
 .banner {
     /*VH = Porcentagem da ALTURA da viewport (janela)  */
     height: 100vh;
@@ -97,11 +102,11 @@ header img {
     text-align: center;
 }
 
-#sobre h2{
+#sobre h2 {
     font-size: 32px;
 }
 
-#cases{
+#cases {
     text-align: center;
 
     padding-bottom: 100px;
@@ -123,10 +128,10 @@ header img {
     align-items: center;
 
     background-color: var(--roxo-gamifica);
-    
+
     padding-bottom: 20px;
     margin-bottom: 20px;
-    
+
     border-radius: 4px;
 
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -216,7 +221,7 @@ header img {
 
     font-family: "Anta";
     font-size: 28px;
-         
+
     color: white;
 
     z-index: 1;
@@ -224,7 +229,123 @@ header img {
     transition: transform 500ms;
 }
 
-#portfolio a:hover{
+#portfolio a:hover {
     transform: scale(1.05);
 
+}
+
+#contato {
+    text-align: center;
+    padding-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+#contato h2 {
+    margin-bottom: 70px;
+}
+
+#contato form {
+    background-color: var(--roxo-gamifica);
+
+    width: 50%;
+
+    margin: 0 auto;
+    padding: 60px 0;
+
+    border-radius: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Montserrat';
+    color: white;
+}
+
+#contato form label {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.campo {
+    width: 60%;
+
+    margin-bottom: 50px;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.campo-textarea {
+    width: 60%;
+
+    margin-bottom: 30px;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.campo-textarea textarea {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 17px;
+
+    background-color: #351868;
+
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    resize: none;
+
+    padding: 10px;
+}
+
+.campo input {
+    height: 40px;
+
+    color: white;
+    background-color: #351868;
+
+    border: none;
+    border-radius: 4px;
+
+    outline: none;
+
+    text-indent: 10px;
+    font-family: 'Montserrat';
+    font-size: 17px;
+}
+
+.campo input:focus, .campo-textarea textarea:focus {
+    outline: 2px solid var(--laranja-gamifica);
+}
+
+#contato form button {
+    background-color: var(--laranja-gamifica);
+
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 4px;
+
+    width: 60%;
+    height: 40px;
+
+    cursor: pointer;
+
+    transition: background-color 500ms ease;
+}
+
+#contato form button:hover {
+    background-color: #ad4929;
 }
