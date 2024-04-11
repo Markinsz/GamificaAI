@@ -323,7 +323,7 @@ header img {
 }
 
 .campo input:focus, .campo-textarea textarea:focus {
-    outline: 2px solid var(--laranja-gamifica);
+    outline: 2px solid var(--laranja-gamifica); 
 }
 
 #contato form button {
