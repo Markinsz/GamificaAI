@@ -30,7 +30,7 @@ h2 {
     background-image: linear-gradient(90deg, rgb(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bgroom.png);
     background-repeat: no-repeat;
 
-    background-position: 235% 40%;
+    background-position: 150% 40%;
 }
 
 .container-grid {
@@ -69,6 +69,8 @@ header button {
     width: 700px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    
 }
 
 .menu a {
@@ -440,6 +442,13 @@ footer a:hover {
     color: var(--laranja-gamifica)
 }
 
+.menu_fechado {
+    display: none;
+}
+
+#icone_barras {
+    display: none;
+}
 
 /* Responsividade */
 
@@ -587,8 +596,6 @@ footer a:hover {
 
     nav.menu {
         width: 100%;
-
-        display: none;
     }
 
     #sobre {
