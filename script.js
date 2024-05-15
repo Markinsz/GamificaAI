@@ -36,27 +36,76 @@ let slides = [
 
 let slideAtual = 0
 
+let nSlides = slides.length
+
+let resize = document.querySelector(".resize")
+
 let Banner = document.querySelector(".banner")
 
 Banner.classList.add(slides[slideAtual])
 
 const Next = () => {
     Banner.classList.remove(slides[slideAtual])
-    if(slideAtual < 2) {
+    if (slideAtual < 2) {
         slideAtual++
     } else {
         slideAtual = 0
     }
 
     Banner.classList.add(slides[slideAtual])
+    Banner.classList.add(slides[resize])
+    
 }
 
 const Back = () => {
     Banner.classList.remove(slides[slideAtual])
-    if(slideAtual > 0) {
+    if (slideAtual > 0) {
         slideAtual--
     } else {
         slideAtual = 2
     }
     Banner.classList.add(slides[slideAtual])
+}
+
+const selecionarSlide = (indiceSlide) => {
+    slides.forEach(slide => Banner.classList.remove(slide))
+
+    slideAtual = indiceSlide
+
+    Banner.classList.add(slides[indiceSlide])
+}
+
+let listaCases = [
+    {
+        imagem: "https://unsplash.it/600/400?image=13",
+        descricao: "Uma empresa de tecnologia lança um desafio de gamificação onde os funcionários devem propor e implementar ideias inovadoras"
+    },
+    {
+        imagem: "https://unsplash.it/600/400?image=24",
+        descricao: "Uma empresa de consultoria cria uma narrativa interatica de gamificação para seu programa de treinamento"
+    },
+    {
+        imagem: "https://unsplash.it/600/400?image=5",
+        descricao: "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo topo do ranking"
+    },
+    {
+        imagem: "https://unsplash.it/600/400?image=67",
+        descricao: "Uma empresa de saúde promove o bem-estar dos funcionários através de um desafio de gamificação de condicionamento físico"
+    }
+]
+
+const renderizarCases = () => {
+    let elementoLista = document.getElementById("lista-cards")
+
+    let template = ""
+
+    listaCases.forEach(cardCase => {
+        template += `<div class=card>
+        <img src="${cardCase.imagem}" alt="">
+        <p>${cardCase.descricao}</p>
+        <button>Ver mais</button>
+      </div>`
+    })
+
+    elementoLista.innerHTML = template
 }

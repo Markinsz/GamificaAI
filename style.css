@@ -83,7 +83,7 @@ h2 {
 }
 
 .botoes svg {
-    fill: #ffffff76;
+    fill: #ffffffaa;
 }
 
 .botoes button {
@@ -92,6 +92,18 @@ h2 {
     background: none;
     border: none;
 
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.botoes button:hover, .botoes button:focus {
+    transform: scale(1.25);
+    fill: #ffffff;
+}
+
+.resize {
+    transform: scale(1.25);
+    fill: #ffffff;
 }
 
 .container-grid {
