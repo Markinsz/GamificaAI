@@ -93,9 +93,7 @@ const selecionarSlide = (indiceSlide) => {
     Banner.classList.add(slides[indiceSlide])
 }
 
-let listaCases = [
-
-]
+let listaCases = []
 
 const renderizarCases = () => {
     let elementoLista = document.getElementById("lista-cards")
@@ -120,13 +118,13 @@ const carregarCases = () => {
     .then ((dados) => {
         listaCases = dados
         renderizarCases
-        .catch(erro => console.error(erro))
     })
+    .catch(erro => console.error(erro))
 }
 
 0 > 2
 
-const solicitarOrcamento = () => {
+const solicitarOrcamento = (event) => {
     // Pegar valores dos inputs
     let valorNome = document.getElementById("campo-nome").value
     let valorEmail = document.getElementById("campo-email").value
@@ -151,9 +149,19 @@ const solicitarOrcamento = () => {
         },
         body: JSON.stringify(dadosForm)
     })
-    .then(resposta => resposta.json())
-    .catch(erro => console.error(erro))
+    .then(resposta => {
+        console.log(resposta)
         // Limpar os campos
+        document.querySelector("#contato form").reset()
+
         // Mostrar alert com msg de sucesso
+        alert("Solicitação Cadastrada")
+    }) 
+    .catch(erro => {
         // CASO ERRO - alert com msg erro
+        console.error(erro)
+        alert("Erro na requisição")
+    })
+
+    event.preventDefault();
 }
