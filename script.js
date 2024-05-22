@@ -63,7 +63,7 @@ const Next = () => {
     }
     // Renderiza o slideAtual
     Banner.classList.add(slides[slideAtual])
-    
+    wqq
 }
 
 const Back = () => {
